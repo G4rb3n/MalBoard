@@ -68,31 +68,31 @@
   "lmcoKillChain": [
     {
       "phaseName": "recon",
-      "columnHeader": "Reconnaissance"
+      "columnHeader": "入侵点"
     },
     {
       "phaseName": "weaponization",
-      "columnHeader": "Weaponization"
+      "columnHeader": "攻击组件"
     },
     {
       "phaseName": "delivery",
-      "columnHeader": "Delivery"
+      "columnHeader": "绕过防御"
     },
     {
       "phaseName": "exploitation",
-      "columnHeader": "Exploitation"
+      "columnHeader": "横向渗透"
     },
     {
       "phaseName": "installation",
-      "columnHeader": "Installation"
+      "columnHeader": "持久化"
     },
     {
       "phaseName": "command-and-control",
-      "columnHeader": "Command & Control"
+      "columnHeader": "流量通信"
     },
     {
       "phaseName": "act-on-objectives",
-      "columnHeader": "Actions on Objectives"
+      "columnHeader": "目的"
     }
   ],
   "mitreAttack": [
