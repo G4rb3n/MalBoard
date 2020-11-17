@@ -369,7 +369,7 @@ function buildHome() {
 
     const htmlContents = `        
         <div class="box header">
-            <span>PLAYBOOK VIEWER</span>
+            <span>攻击矩阵</span>
         </div>
         <div class="box inside">
             <div class="box top">
@@ -424,7 +424,7 @@ function buildMap() {
     const message = `Welcome to the Unit 42 Playbook Map.<br/><br/>${tooltip}`;
 
     const htmlContents = `
-        <div class="box header"><span>PLAYBOOK MAP</span></div>
+        <div class="box header"><span>地区分布</span></div>
         <div class="map-description">${message}</div>
         <div id='container' class='container'></div>
      `;
