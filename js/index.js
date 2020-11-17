@@ -421,7 +421,7 @@ function buildMap() {
     const {iso2_to_iso3, iso3_to_data} = consts;
 
     const tooltip = 'Please hover over a bubble to see Playbooks targeting that country.';
-    const message = `Welcome to the Unit 42 Playbook Map.<br/><br/>${tooltip}`;
+    const message = `恶意软件地区分布图<br/><br/>${tooltip}`;
 
     const htmlContents = `
         <div class="box header"><span>地区分布</span></div>
