@@ -851,9 +851,10 @@ function addInfobox(playbook) {
     const total_indicators = getTypeFromPlaybook("indicator", playbook).length;
     const total_attackpatterns = getTypeFromPlaybook("attack-pattern", playbook).length;
     const ib_markup = (
-        `<div class="left"><div class="action middle2" title="Click For Overview">Indicators: ${total_indicators}</div></div>` +
-        `<div><div>Industries:</div><div>${identitySectors}</div></div>` + 
-        `<div><div>Regions:</div><div>${identityRegions}</div></div>`
+        `<div class="left"><div>Intrusion Set: ${current_intrusion_set}</div></div>` +
+        `<div class="middle"><div>Campaigns: ${total_campaigns}</div></div>` +
+        `<div class="middle2"><div class="action middle2" title="Click For Overview">Indicators: ${total_indicators}</div></div>` +
+        `<div class="right"><div>Attack Patterns: ${total_attackpatterns}</div></div>`
     );
     $('.info1').empty().append(ib_markup);
     $('.modalcontainer').empty().append(indicatorTableDiv);
@@ -914,6 +915,34 @@ function addInfoBox2(report, playbook) {
 
     let context_markup = '';
     let displayInfoBar2 = false;
+
+    if (identitySectors.length) {
+        context_markup += `<div><div>Industries:</div><div>${identitySectors}</div></div>`;
+        displayInfoBar2 = true;
+    } else {
+        context_markup += '<div></div>';
+    }
+
+    if (identityRegions.length) {
+        context_markup += `<div><div>Regions:</div><div>${identityRegions}</div></div>`;
+        displayInfoBar2 = true;
+    } else {
+        context_markup += '<div></div>';
+    }
+
+    if (identityTypes.length) {
+        context_markup += `<div><div>Type:</div><div>${identityTypes}</div></div>`;
+        displayInfoBar2 = true;
+    } else {
+        context_markup += '<div></div>';
+    }
+
+    if (malwareNames.length) {
+        context_markup += `<div><div>Malware Used:</div><div>${malwareNames}</div></div>`;
+        displayInfoBar2 = true;
+    } else {
+        context_markup += '<div></div>';
+    }
 
     if (displayInfoBar2) {
         $('.info2').empty().show().append(context_markup);
